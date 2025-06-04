@@ -13,7 +13,7 @@ export default function Home() {
       <FeatureHighlight />
       {/*<CaseStudies />*/}
       {/*<Testimonials />*/}
-      <Contact />
+      {/*<Contact />*/}
     </>
   );
 }

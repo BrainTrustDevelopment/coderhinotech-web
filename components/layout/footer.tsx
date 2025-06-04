@@ -15,20 +15,20 @@ export default function Footer() {
             <div className="space-y-2">
               <div className="flex items-center">
                 <Mail className="w-4 h-4 mr-2 text-sky-500" />
-                <a href="mailto:hello@coderhino.tech" className="hover:text-white transition-colors">hello@coderhino.tech</a>
+                <a href="mailto:hello@coderhino.tech" className="hover:text-white transition-colors">hello@coderhinotech.com</a>
               </div>
-              <div className="flex items-center">
+              {/*<div className="flex items-center">
                 <Phone className="w-4 h-4 mr-2 text-sky-500" />
                 <a href="tel:+1234567890" className="hover:text-white transition-colors">+1 (234) 567-890</a>
-              </div>
+              </div>*/}
               <div className="flex items-center">
                 <MapPin className="w-4 h-4 mr-2 text-sky-500" />
-                <span>123 Tech Avenue, San Francisco, CA</span>
+                <span>221 W 10th Street 3rd & 4th Floors, Wilmington, DE 19801</span>
               </div>
             </div>
           </div>
           
-          {/* Services */}
+          {/* Services 
           <div>
             <h3 className="text-white text-lg font-semibold mb-4">Services</h3>
             <ul className="space-y-2">
@@ -50,7 +50,7 @@ export default function Footer() {
             </ul>
           </div>
           
-          {/* Company */}
+          {/* Company 
           <div>
             <h3 className="text-white text-lg font-semibold mb-4">Company</h3>
             <ul className="space-y-2">
@@ -72,7 +72,7 @@ export default function Footer() {
             </ul>
           </div>
           
-          {/* Resources */}
+          {/* Resources 
           <div>
             <h3 className="text-white text-lg font-semibold mb-4">Resources</h3>
             <ul className="space-y-2">
@@ -92,7 +92,7 @@ export default function Footer() {
                 <Link href="#" className="hover:text-white transition-colors">Support</Link>
               </li>
             </ul>
-          </div>
+          </div>*/}
         </div>
         
         {/* Divider */}
