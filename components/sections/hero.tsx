@@ -44,7 +44,7 @@ export default function Hero() {
             We craft innovative digital solutions tailored to your business needs. Our expertise in App Development, Mobile Solutions, Web Design, and AI Integration drives your success in the digital landscape.
           </motion.p>
           
-          <motion.div
+         {/* <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={isVisible ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
             transition={{ duration: 0.5, delay: 0.6 }}
@@ -64,7 +64,7 @@ export default function Hero() {
             >
               View Our Work
             </Button>
-          </motion.div>
+          </motion.div>*/}
         </div>
         
         {/* Floating device mockups */}

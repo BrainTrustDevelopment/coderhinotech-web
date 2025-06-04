@@ -99,18 +99,7 @@ export default function FeatureHighlight() {
                 </motion.div>
               ))}
             </div>
-            
-            <div className="mt-8">
-              <div className="flex flex-wrap items-center space-x-3">
-                <span className="text-white font-medium">Trusted by:</span>
-                <div className="flex items-center flex-wrap gap-6 mt-2 grayscale opacity-70">
-                  <img src="https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/spotify.svg" alt="Spotify" className="h-5 invert" />
-                  <img src="https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/microsoft.svg" alt="Microsoft" className="h-5 invert" />
-                  <img src="https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/adobe.svg" alt="Adobe" className="h-5 invert" />
-                  <img src="https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/slack.svg" alt="Slack" className="h-5 invert" />
-                </div>
-              </div>
-            </div>
+
           </motion.div>
         </div>
       </div>

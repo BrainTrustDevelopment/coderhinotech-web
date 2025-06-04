@@ -8,8 +8,8 @@ import { Menu, X, Code, Cpu } from 'lucide-react';
 
 const navLinks = [
   { name: 'Services', href: '#services' },
-  { name: 'Work', href: '#case-studies' },
-  { name: 'Testimonials', href: '#testimonials' },
+ // { name: 'Work', href: '#case-studies' },
+ // { name: 'Testimonials', href: '#testimonials' },
   { name: 'Contact', href: '#contact' },
 ];
 
@@ -64,12 +64,12 @@ export default function Header() {
                 </li>
               ))}
             </ul>
-            <Button 
+            {/*<Button 
               size="sm" 
               className="bg-gradient-to-r from-sky-500 to-sky-600 hover:from-sky-600 hover:to-sky-700 shadow-[0_0_15px_rgba(14,165,233,0.3)] hover:shadow-[0_0_20px_rgba(14,165,233,0.5)] transition-all duration-300"
             >
               Get Started
-            </Button>
+            </Button>*/}
           </nav>
 
           {/* Mobile Menu Button */}
