@@ -104,7 +104,7 @@ export default function Footer() {
             <p>&copy; {currentYear} CodeRhino Tech. All rights reserved.</p>
           </div>
           
-          {/* Social Links */}
+          {/* Social Links 
           <div className="flex space-x-4">
             <a 
               href="#" 
@@ -134,7 +134,7 @@ export default function Footer() {
             >
               <Instagram className="w-5 h-5" />
             </a>
-          </div>
+          </div>*/}
         </div>
       </div>
     </footer>
