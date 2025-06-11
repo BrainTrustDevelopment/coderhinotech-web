@@ -2,44 +2,32 @@
 
 import { useState, useEffect } from 'react';
 import { motion } from '@/lib/motion-wrapper';
-import { Separator } from '@/components/ui/separator';
 import { Star, Quote } from 'lucide-react';
 
 const testimonials = [
   {
     id: 1,
-    content: "Working with CodeRhino Tech transformed our business. Their mobile app solution increased our customer engagement by 45% within the first quarter.",
-    author: "Sarah Johnson",
-    role: "CEO, HealthPlus",
+    content: "Partnering with CodeRhino Tech streamlined our entire app development process. Their team brought clarity, speed, and precision—taking our concept from idea to launch in record time. We were finally able to focus on innovation instead of chasing bugs and bottlenecks.",
+    author: "Dr. Von Hommer",
+    role: "CEO, HX Innovations",
     rating: 5,
-    imageUrl: "https://images.pexels.com/photos/1239291/pexels-photo-1239291.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
   },
   {
     id: 2,
-    content: "The AI integration that CodeRhino developed for our platform has revolutionized how we analyze customer data. Impressive technical expertise!",
-    author: "Michael Chen",
-    role: "CTO, DataSmart Analytics",
+    content: "CodeRhino Tech provided invaluable guidance as we developed our internal AI strategy. Their consultative approach helped us identify high-impact use cases and align our team around scalable solutions. It was exactly the strategic support we needed.",
+    author: "Karla Trotman",
+    role: "CEO, Electrosoft Inc",
     rating: 5,
-    imageUrl: "https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
   },
-  {
-    id: 3,
-    content: "We approached CodeRhino for a complete website redesign, and they delivered beyond our expectations. Our conversion rate has increased by 28%.",
-    author: "Elena Rodriguez",
-    role: "Marketing Director, StyleTrend",
-    rating: 5,
-    imageUrl: "https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
-  },
+{
+  id: 3,
+  content: "We're working with CodeRhino Tech to build our internal AI platform, and the experience has been outstanding. Their team quickly understood our operations and translated them into scalable, intelligent workflows. It’s setting a new foundation for how we work.",
+  author: "Mike Miller",
+  role: "CEO, Prolific Holdings Inc.",
+  rating: 5,
+}
 ];
 
-const clientLogos = [
-  "https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/adobe.svg",
-  "https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/airbnb.svg",
-  "https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/amazon.svg",
-  "https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/dropbox.svg",
-  "https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/netflix.svg",
-  "https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/slack.svg",
-];
 
 export default function Testimonials() {
   const [isVisible, setIsVisible] = useState(false);
@@ -108,48 +96,14 @@ export default function Testimonials() {
                 
                 <p className="text-slate-300 mb-6 text-sm italic">{testimonial.content}</p>
                 
-                <div className="flex items-center">
-                  <div className="rounded-full overflow-hidden w-12 h-12 mr-4 border-2 border-sky-500/20">
-                    <img 
-                      src={testimonial.imageUrl} 
-                      alt={testimonial.author}
-                      className="w-full h-full object-cover" 
-                    />
-                  </div>
-                  <div>
-                    <h4 className="text-white font-medium">{testimonial.author}</h4>
-                    <p className="text-slate-400 text-sm">{testimonial.role}</p>
-                  </div>
+                <div>
+                  <h4 className="text-white font-medium">{testimonial.author}</h4>
+                  <p className="text-slate-400 text-sm">{testimonial.role}</p>
                 </div>
               </div>
             </motion.div>
           ))}
         </div>
-        
-        {/* Client Logos */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={isVisible ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-          transition={{ duration: 0.5, delay: 0.5 }}
-        >
-          <Separator className="bg-slate-800 mb-12" />
-          
-          <div className="text-center mb-8">
-            <h3 className="text-xl font-semibold text-white mb-2">Trusted by Industry Leaders</h3>
-            <p className="text-slate-400 text-sm">We've helped companies of all sizes achieve their technology goals</p>
-          </div>
-          
-          <div className="flex flex-wrap justify-center items-center gap-8 md:gap-16">
-            {clientLogos.map((logo, index) => (
-              <div 
-                key={index} 
-                className="grayscale hover:grayscale-0 opacity-70 hover:opacity-100 transition-all duration-300"
-              >
-                <img src={logo} alt={`Client logo ${index + 1}`} className="h-8 md:h-10 invert" />
-              </div>
-            ))}
-          </div>
-        </motion.div>
       </div>
     </section>
   );
