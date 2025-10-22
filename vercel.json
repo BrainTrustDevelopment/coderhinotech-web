@@ -1,0 +1,26 @@
+{
+  "redirects": [
+    {
+      "source": "/:path*",
+      "has": [
+        {
+          "type": "host",
+          "value": "thebraintrust.ai"
+        }
+      ],
+      "destination": "https://www.coderhinotech.com/braintrust",
+      "permanent": true
+    },
+    {
+      "source": "/:path*",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.thebraintrust.ai"
+        }
+      ],
+      "destination": "https://www.coderhinotech.com/braintrust",
+      "permanent": true
+    }
+  ]
+}

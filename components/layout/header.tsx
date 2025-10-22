@@ -2,14 +2,13 @@
 
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { Button } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
-import { Menu, X, Code, Cpu } from 'lucide-react';
+import { Menu, X, Code, Cpu, Brain } from 'lucide-react';
 
 const navLinks = [
-  { name: 'Services', href: '#services' },
+  { name: 'Services', href: '/#services' },
  // { name: 'Work', href: '#case-studies' },
-  { name: 'Testimonials', href: '#testimonials' },
+  { name: 'Testimonials', href: '/#testimonials' },
 //  { name: 'Contact', href: '#contact' },
 ];
 
@@ -37,17 +36,23 @@ export default function Header() {
     >
       <div className="container mx-auto px-4 md:px-6">
         <div className="flex items-center justify-between">
-          <Link 
-            href="/" 
-            className="flex items-center space-x-2 text-white"
+          <Link
+            href="/"
+            className="flex items-center space-x-3 text-white group"
           >
-            <div className="relative flex items-center justify-center w-10 h-10 bg-sky-500/20 rounded-lg">
+            <div className="relative flex items-center justify-center w-10 h-10 bg-gradient-to-br from-sky-500/20 to-purple-500/20 rounded-lg group-hover:from-sky-500/30 group-hover:to-purple-500/30 transition-all duration-300">
               <Code className="w-6 h-6 text-sky-500" aria-hidden="true" />
               <Cpu className="absolute w-4 h-4 text-sky-400 animate-pulse" aria-hidden="true" />
             </div>
-            <span className="text-xl font-bold tracking-tight">
-              CodeRhino<span className="text-sky-500">Tech</span>
-            </span>
+            <div className="flex items-center space-x-2">
+              <span className="text-xl font-bold tracking-tight">
+                CodeRhino<span className="text-sky-500">Tech</span>
+              </span>
+              <span className="text-slate-600 text-lg font-light">/</span>
+              <span className="text-sm font-semibold tracking-tight text-purple-400 group-hover:text-purple-300 transition-colors">
+                The BrainTrust
+              </span>
+            </div>
           </Link>
 
           {/* Desktop Navigation */}
@@ -55,7 +60,7 @@ export default function Header() {
             <ul className="flex space-x-8">
               {navLinks.map((link) => (
                 <li key={link.name}>
-                  <Link 
+                  <Link
                     href={link.href}
                     className="text-slate-300 hover:text-white transition-colors relative after:absolute after:bottom-0 after:left-0 after:right-0 after:h-[2px] after:bg-sky-500 after:scale-x-0 after:origin-center after:transition-transform hover:after:scale-x-100 py-1"
                   >
@@ -64,12 +69,17 @@ export default function Header() {
                 </li>
               ))}
             </ul>
-            {/*<Button 
-              size="sm" 
-              className="bg-gradient-to-r from-sky-500 to-sky-600 hover:from-sky-600 hover:to-sky-700 shadow-[0_0_15px_rgba(14,165,233,0.3)] hover:shadow-[0_0_20px_rgba(14,165,233,0.5)] transition-all duration-300"
-            >
-              Get Started
-            </Button>*/}
+
+            {/* The BrainTrust Button - Visually Distinct */}
+            <Link href="/braintrust">
+              <div className="flex items-center space-x-2 px-4 py-2 rounded-full bg-purple-500/10 border border-purple-500/30 hover:bg-purple-500/20 hover:border-purple-500/50 transition-all duration-300 group">
+                <Brain className="w-4 h-4 text-purple-400 group-hover:text-purple-300 transition-colors" />
+                <div className="flex flex-col">
+                  <span className="text-xs text-purple-400 group-hover:text-purple-300 font-medium transition-colors">AI Consulting</span>
+                  <span className="text-[10px] text-purple-500/70 -mt-0.5">The BrainTrust</span>
+                </div>
+              </div>
+            </Link>
           </nav>
 
           {/* Mobile Menu Button */}
@@ -95,7 +105,7 @@ export default function Header() {
             <ul className="space-y-4">
               {navLinks.map((link) => (
                 <li key={link.name}>
-                  <Link 
+                  <Link
                     href={link.href}
                     className="block py-2 text-slate-300 hover:text-white transition-colors"
                     onClick={() => setIsMobileMenuOpen(false)}
@@ -104,13 +114,21 @@ export default function Header() {
                   </Link>
                 </li>
               ))}
-              <li>
-                <Button 
-                  size="sm" 
-                  className="w-full bg-gradient-to-r from-sky-500 to-sky-600 hover:from-sky-600 hover:to-sky-700 mt-2 shadow-[0_0_15px_rgba(14,165,233,0.3)] hover:shadow-[0_0_20px_rgba(14,165,233,0.5)] transition-all duration-300"
+
+              {/* The BrainTrust - Mobile */}
+              <li className="pt-4 border-t border-slate-800">
+                <Link
+                  href="/braintrust"
+                  onClick={() => setIsMobileMenuOpen(false)}
                 >
-                  Get Started
-                </Button>
+                  <div className="flex items-center space-x-3 px-4 py-3 rounded-lg bg-purple-500/10 border border-purple-500/30 hover:bg-purple-500/20 hover:border-purple-500/50 transition-all duration-300">
+                    <Brain className="w-5 h-5 text-purple-400" />
+                    <div className="flex flex-col">
+                      <span className="text-sm text-purple-400 font-medium">AI Consulting</span>
+                      <span className="text-xs text-purple-500/70">The BrainTrust</span>
+                    </div>
+                  </div>
+                </Link>
               </li>
             </ul>
           </nav>

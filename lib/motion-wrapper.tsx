@@ -12,7 +12,7 @@ type MotionProps = {
   onClick?: () => void;
 };
 
-const createMotionComponent = (Component: 'div' | 'p' | 'h2') => {
+const createMotionComponent = (Component: 'div' | 'p' | 'h1' | 'h2') => {
   return ({ children, initial, animate, transition, className, style, onClick }: MotionProps) => {
     // All hooks must be called unconditionally at the top level
     const [isClient, setIsClient] = React.useState(false);
@@ -55,5 +55,6 @@ const createMotionComponent = (Component: 'div' | 'p' | 'h2') => {
 export const motion = {
   div: createMotionComponent('div'),
   p: createMotionComponent('p'),
+  h1: createMotionComponent('h1'),
   h2: createMotionComponent('h2'),
 };

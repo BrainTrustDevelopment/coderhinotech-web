@@ -22,8 +22,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className="scroll-smooth">
-      <body className={`${inter.className} bg-gradient-to-b from-slate-900 to-slate-950 text-slate-300`}>
+    <html lang="en" className="scroll-smooth" suppressHydrationWarning>
+      <body className={`${inter.className} bg-gradient-to-b from-slate-900 to-slate-950 text-slate-300`} suppressHydrationWarning>
         <ThemeProvider
           attribute="class"
           defaultTheme="dark"
